@@ -1,6 +1,6 @@
 """
 whitespaces have been removed from this code
-MADE BY UMAR SOHAILS
+MADE BY UMAR SOHAIL
 """
 while True:
     rel = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
