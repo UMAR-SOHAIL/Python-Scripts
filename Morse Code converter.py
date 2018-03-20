@@ -33,25 +33,20 @@ mc = {
     "--..":"z",
 }
 while True:
-    print("please distinguish your moarse code by a comma \",\" and don't add spaces between comma e.g .,.. not ., ..")
-    user = input("enter your moarse code: ")
+    print("please distinguish your moarse code by spaces more than more spaces can also work")
+    user = str(input("enter your moarse code: "))
+    split = user.split(" ")
+    
+    def space_remover(li):
+        while '' in li:
+            li.remove('')
 
-    split = user.split(",")
+        return li
 
-
-    def space_remover(x):
-        for i in x:
-            for l in i:
-                #if " " in l:
-                while " " in l:
-                    l = i.replace(" ","")
-                    x[x.index(i)] = l
-        return x
-
-    s_rem = space_remover(split)
+    o = space_remover(split)
     
     g=""
-    for morse in s_rem:
+    for morse in o:
         f = mc[morse]
         g+=f
 
