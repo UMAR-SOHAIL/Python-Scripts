@@ -38,8 +38,20 @@ while True:
 
     split = user.split(",")
 
+
+    def space_remover(x):
+        for i in x:
+            for l in i:
+                #if " " in l:
+                while " " in l:
+                    l = i.replace(" ","")
+                    x[x.index(i)] = l
+        return x
+
+    s_rem = space_remover(split)
+    
     g=""
-    for morse in split:
+    for morse in s_rem:
         f = mc[morse]
         g+=f
 
@@ -52,3 +64,4 @@ while True:
         break
     else:
         pass
+
