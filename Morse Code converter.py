@@ -85,8 +85,9 @@ while True:
             n += " " + p
         return n
 
+    l = space_remover(split)
 
-    if split[0] in mc:
+    if l[0] in mc:
         print (morse_alpha(space_remover(split)))
 
     else:
