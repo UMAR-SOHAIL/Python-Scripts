@@ -9,7 +9,7 @@ score = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2,
          "r": 1, "u": 1, "t": 1, "w": 4, "v": 4, "y": 4, 
          "x": 8, "z": 10}
 
-print("please enter your  sentense freely more then one space does not matter :)")
+print("please enter your  sentense freely, more then one space does not matter :)")
 user_input = str(input("please enter your sentense: "))
 
 split = user_input.split(" ")
