@@ -13,8 +13,12 @@ score = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2,
 user_input = str(input("please enter your sentense: "))
 
 split = user_input.split(" ")
-print(split)
 
+def space_remover(li):
+        while '' in li:
+            li.remove('')
+        return li
+    
 g = []
 def scrabble_score(word):   
     for i in word:
@@ -31,11 +35,11 @@ def calculator(a):
     return largest
 
 def answer(word, score, larg):
-    c = " this is the largest number %s " % larg
+    c = " '%s' is the largest number " % larg
     for i in range(0,len(word)):
         a = '%s = %s' % (word[i],score[i])
         b = print(a)
     print()
     return c
         
-print(answer(split, scrabble_score(split), calculator(g)))
+print(answer(split, scrabble_score(space_remover(split)), calculator(g)))
