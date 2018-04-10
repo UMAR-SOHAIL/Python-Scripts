@@ -3,28 +3,35 @@ CREATED BY UMAR SOHAIL
 MORE UPDATE COMING ON, HOLD ON TO YOUR SEATS :)4
 """
 
-
-user_sentence = str(input("Plaese enter your sentense or paragraph: ")).lower()
-user_word = str(input("please enter the word that you want to count: ")).lower()
-
-
-sentence_split = user_sentence.split(' ')
+while True:
+    user_sentence = str(input("Plaese enter your sentense or paragraph: ")).lower()
+    user_word = str(input("please enter the word that you want to count: ")).lower()
 
 
-def space_remover(li):
-    while '' in li:
-        li.remove('')
-    return li
+    sentence_split = user_sentence.split(' ')
 
-cleaned_sent = space_remover(sentence_split)
 
-def word_counter(word, lis):
-    total = 0
-    for i in lis:
-        if word == i:
-            total += 1
-        else:
-            pass
-    return total
+    def space_remover(li):
+        while '' in li:
+            li.remove('')
+        return li
 
-print (word_counter(user_word, cleaned_sent))
+    cleaned_sent = space_remover(sentence_split)
+
+    def word_counter(word, lis):
+        total = 0
+        for i in lis:
+            if word == i:
+                total += 1
+            else:
+                pass
+        return total
+
+    print (word_counter(user_word, cleaned_sent))
+
+    user_quit = str(input("press 'Q' to quit or anyother key to continue"))
+
+    if user_quit == 'q' or user_quit == 'Q':
+            break
+    else:
+            continue

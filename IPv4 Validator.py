@@ -3,12 +3,14 @@
 2)NO SUBNETS and SPECIAL IPs Could be validated using this script!!!
 MADE BY UMAR SOHAIL
 """
+import sys
 
 ip = str(input("enter IP address: "))
 
 spliter = ip.split(".")
-if not len(spliter) == 4: 
-    raise ValueError
+if not len(spliter) == 4:
+    print("this is not a valid ip")
+    sys.exit()
     
 
 ip_address = ""
@@ -16,7 +18,8 @@ ip_address = ""
 for i in spliter:
      con = int(i)
      if con > 255:
-         raise ValueError
+         print("this is not a valid ip")
+         sys.exit()
      else:
          string = str(con)
          ip_address += "%s."%(string)
